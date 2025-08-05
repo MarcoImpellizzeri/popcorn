@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.fire-glow {
+    filter: drop-shadow(0 0 12px rgba(255,140,0,.6))
+    drop-shadow(0 0 24px rgba(255,90,0,.35));
+}
+.metal {
+    background: linear-gradient(145deg, #2c2f36, #1f2228);
+    box-shadow: inset 8px -8px 20px rgba(0,0,0,.35), inset -6px 8px 14px rgba(255,255,255,.05);
+}
+.hot {
+    background: radial-gradient(circle at 60% 40%, #fff 0, #ffd 10%, #ffe27a 35%, #f8b500 55%, #e76f00 75%, #7a1a00 100%);
+}
