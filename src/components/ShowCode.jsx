@@ -27,7 +27,7 @@ const { popOne, reset } = usePopStore()
   pops: 0,
 
   popOne: () => {
-    const next = get().kernels.find(k => !k.popped);
+    const next = get().kernels.find(k => !k.popped)
     if (!next) return
     set(s => ({
       kernels: s.kernels.map(k => k.id === next.id ? { ...k, popped: true } : k),
