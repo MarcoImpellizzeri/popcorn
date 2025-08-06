@@ -1,14 +1,13 @@
 import Pan from './components/Pan'
 import Header from './components/Header.jsx'
 import Controls from './components/Controls'
-import ShowCode from './components/ShowCode.jsx'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[url('/src/assets/background.png')] bg-cover bg-center">
+    <div className="min-h-screen bg-[url('/src/assets/background.png')] bg-cover bg-center flex flex-col">
       <Header />
 
-      <main className="mt-8 flex flex-col md:flex-row items-center md:items-start md:justify-center gap-8 px-4">
+      <main className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 px-4 overflow-hidden">
         {/* Padella */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Pan />
@@ -22,3 +21,5 @@ export default function App() {
     </div>
   )
 }
+
+

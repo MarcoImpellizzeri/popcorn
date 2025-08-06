@@ -5,7 +5,7 @@ export default function Header() {
       <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
 
       {/* Titolo */}
-      <h1 className="relative z-10 text-4xl font-bold text-yellow-400 drop-shadow-[2px_2px_3px_rgba(0,0,0,0.7)]">
+      <h1 className="uppercase relative z-10 text-4xl font-bold text-yellow-400 drop-shadow-[2px_2px_3px_rgba(0,0,0,0.7)]">
         Popcorn
       </h1>
 

@@ -1,7 +1,7 @@
 // src/store/usePopStore.js
 import { create } from "zustand";
 
-const KERNELS = 60;
+const KERNELS = 50;
 
 // Ritorna x,y in percentuale (0..100) dentro un'ellisse ruotata
 function randInRotatedEllipse({ cx=50, cy=50, rx=31, ry=23, rotation=-24 }) {
