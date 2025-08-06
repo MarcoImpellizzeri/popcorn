@@ -6,8 +6,8 @@ import { usePopStore } from '../store/usePopStore.js'
 export default function ShowCode() {
   const [tab, setTab] = useState('ui') // "ui" | "store"
 
-  const uiCode = useMemo(() => `const { popOne, reset, kernels } = usePopStore()
-const allPopped = kernels.every(k => k.popped)
+  const uiCode = useMemo(() => `export default function Controls({ allPopped }) {
+const { popOne, reset } = usePopStore()
 
 <button
   onClick={popOne}
@@ -19,7 +19,8 @@ const allPopped = kernels.every(k => k.popped)
 
 <button onClick={reset} className="px-5 py-2.5 rounded-full font-bold">
   Reset
-</button>`, [])
+</button>
+})`, [])
 
   const storeCode = useMemo(() => `export const usePopStore = create((set, get) => ({
   kernels: makeKernels(),
@@ -27,15 +28,15 @@ const allPopped = kernels.every(k => k.popped)
 
   popOne: () => {
     const next = get().kernels.find(k => !k.popped);
-    if (!next) return;
+    if (!next) return
     set(s => ({
       kernels: s.kernels.map(k => k.id === next.id ? { ...k, popped: true } : k),
       pops: s.pops + 1
-    }));
+    }))
   },
 
   reset: () => set({ kernels: makeKernels(), pops: 0 })
-}));`, [])
+}))`, [])
 
   const code = tab === 'ui' ? uiCode : storeCode
 

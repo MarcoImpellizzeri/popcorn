@@ -2,7 +2,7 @@ import Kernel from './Kernel.jsx'
 import { usePopStore } from '../store/usePopStore.js'
 
 export default function Pan() {
-  const { kernels } = usePopStore();
+  const { kernels } = usePopStore()
 
   return (
     <div className="relative w-full max-w-[720px]">

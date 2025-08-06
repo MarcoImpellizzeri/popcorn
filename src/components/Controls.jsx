@@ -1,9 +1,8 @@
 import { usePopStore } from '../store/usePopStore'
 import ShowCode from './ShowCode.jsx'
 
-export default function Controls() {
-  const { popOne, reset, kernels, pops } = usePopStore()
-  const allPopped = kernels.every(k => k.popped)
+export default function Controls({ allPopped }) {
+  const { popOne, kernels, pops, reset } = usePopStore()
 
   return (
     <div className="w-full">
