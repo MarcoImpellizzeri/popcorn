@@ -1,12 +1,34 @@
-# React + Vite
+# 🍿 POPCORN
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive mini-demo built with React + Zustand: a cartoon-style frying pan, corn kernels that pop on click, a live counter, and all logic managed through a global state store.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
 
-## Expanding the ESLint configuration
+- Cartoon-style illustrated frying pan with kernels positioned inside a rotated ellipse.
+- Raw kernels that turn into popped popcorn when clicked.
+- Random rotations, and multiple popped popcorn image variations.
+- Visual counter showing the number of popped kernels.
+- “Code Used” section always visible.
+- Responsive layout optimized for both desktop and mobile.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repo:**
+    ```bash
+    git clone https://github.com/MarcoImpellizzeri/popcorn.git
+    cd popcorn
+    ```
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3. **Run the project:**
+    ```bash
+    npm run dev
+    ```
+
+
