@@ -8,7 +8,7 @@ export default function Pan() {
     <div className="relative w-full max-w-[720px]">
       {/* immagine padella */}
       <img
-        src="/src/assets/pan.png"
+        src="/assets/pan.png"
         alt="pan"
         className="w-full h-auto block select-none"
       />

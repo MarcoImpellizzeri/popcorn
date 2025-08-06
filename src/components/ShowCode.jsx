@@ -1,11 +1,13 @@
 import { useState, useMemo } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { usePopStore } from '../store/usePopStore.js'
 
 export default function ShowCode() {
   const [tab, setTab] = useState('ui') // "ui" | "store"
 
-  const uiCode = useMemo(() => `const allPopped = kernels.every(k => k.popped);
+  const uiCode = useMemo(() => `const { popOne, reset, kernels } = usePopStore()
+const allPopped = kernels.every(k => k.popped)
 
 <button
   onClick={popOne}

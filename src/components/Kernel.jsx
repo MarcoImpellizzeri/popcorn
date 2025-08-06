@@ -13,8 +13,8 @@ export default function Kernel({ popped, x, y }) {
   }, [popped, popcornNumber]);
 
   const imageSrc = popped
-    ? `/src/assets/popcorn-${popcornNumber ?? 1}.png`
-    : `/src/assets/kernel.png`;
+    ? `/assets/popcorn-${popcornNumber ?? 1}.png`
+    : `/assets/kernel.png`;
 
   return (
     <div

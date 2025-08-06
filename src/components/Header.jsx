@@ -1,6 +1,6 @@
 export default function Header() {
   return(
-    <header className="flex justify-between items-center px-6 py-3 bg-[url('/src/assets/tablecloth.png')] bg-cover bg-center shadow-md relative">
+    <header className="flex justify-between items-center px-6 py-3 bg-[url('/assets/tablecloth.png')] bg-cover bg-center shadow-md relative">
       {/* Ombra sopra lo sfondo per leggibilità */}
       <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
 
