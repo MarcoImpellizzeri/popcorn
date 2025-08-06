@@ -1,7 +1,7 @@
 // src/store/usePopStore.js
 import { create } from "zustand";
 
-const KERNELS = 100;
+const KERNELS = 60;
 
 // genera un punto uniforme in un'ellisse ruotata (percentuali 0–100)
 function randInRotatedEllipse({ cx = 50, cy = 50, rx = 42, ry = 30, rotation = -12 }) {

@@ -2,7 +2,7 @@ import Kernel from './Kernel.jsx'
 import { usePopStore } from '../store/usePopStore.js'
 
 export default function Pan() {
-  const { kernels, heatOn } = usePopStore()
+  const { kernels } = usePopStore()
 
   return (
     <div className="relative inline-block">
