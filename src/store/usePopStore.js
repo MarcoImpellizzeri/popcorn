@@ -3,37 +3,36 @@ import { create } from "zustand";
 
 const KERNELS = 60;
 
-// genera un punto uniforme in un'ellisse ruotata (percentuali 0–100)
-function randInRotatedEllipse({ cx = 50, cy = 50, rx = 42, ry = 30, rotation = -12 }) {
+// Ritorna x,y in percentuale (0..100) dentro un'ellisse ruotata
+function randInRotatedEllipse({ cx=50, cy=50, rx=31, ry=23, rotation=-24 }) {
   const theta = Math.random() * Math.PI * 2;
-  const r = Math.sqrt(Math.random());        // sqrt per distribuzione uniforme
+  const r = Math.sqrt(Math.random());     // uniforme sull'area
   const x = r * rx * Math.cos(theta);
   const y = r * ry * Math.sin(theta);
 
-  const rad = (rotation * Math.PI) / 180;    // ruota l’ellisse
+  const rad = (rotation * Math.PI) / 180;
   const xr = x * Math.cos(rad) - y * Math.sin(rad);
   const yr = x * Math.sin(rad) + y * Math.cos(rad);
 
-  return { x: cx + xr, y: cy + yr };         // trasla al centro
+  return { x: cx + xr, y: cy + yr };      // percentuali 0..100
 }
 
 function makeKernels() {
-  return Array.from({ length: KERNELS }, (_, i) => {
+  return Array.from({ length: KERNELS }, (_, id) => {
     const p = randInRotatedEllipse({
-      cx: 480,   // centro dell’area interna
-      cy: 220,
-      rx: 170,   // raggio orizzontale (in % dell’area interna)
-      ry: 140,   // raggio verticale
-      rotation: -30 // gradi, per seguire l’inclinazione della padella
+      cx: 55,   // centro dell’overlay (50% = centro)
+      cy: 40,
+      rx: 20,   // “raggi” in % dell’overlay
+      ry: 20,
+      rotation: -10
     });
-    return { id: i, popped: false, x: p.x, y: p.y };
+    return { id, popped: false, x: p.x, y: p.y };
   });
 }
 
 export const usePopStore = create((set, get) => ({
   kernels: makeKernels(),
   pops: 0,
-
   popOne: () => {
     const next = get().kernels.find(k => !k.popped);
     if (!next) return;
@@ -42,6 +41,5 @@ export const usePopStore = create((set, get) => ({
       pops: s.pops + 1
     }));
   },
-
   reset: () => set({ kernels: makeKernels(), pops: 0 })
 }));
