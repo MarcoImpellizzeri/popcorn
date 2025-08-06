@@ -4,6 +4,14 @@ An interactive mini-demo built with React + Zustand: a cartoon-style frying pan,
 
 ---
 
+
+## 🌍 Live Demo
+
+You can try the project online here:  
+[**POPCORN Demo on Netlify**](https://popcorn-marcoimpellizzeri.netlify.app/)  
+
+--- 
+
 ## 🔥 Features
 
 - Cartoon-style illustrated frying pan with kernels positioned inside a rotated ellipse.
@@ -15,20 +23,6 @@ An interactive mini-demo built with React + Zustand: a cartoon-style frying pan,
 
 ---
 
-## 🚀 Getting Started
 
-1. **Clone the repo:**
-    ```bash
-    git clone https://github.com/MarcoImpellizzeri/popcorn.git
-    cd popcorn
-    ```
-2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
-3. **Run the project:**
-    ```bash
-    npm run dev
-    ```
 
 
